@@ -1,0 +1,2 @@
+C:\Users\becknellj\Unity\VR_GAME_SE4910_landmark\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\becknellj\Unity\VR_GAME_SE4910_landmark\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
