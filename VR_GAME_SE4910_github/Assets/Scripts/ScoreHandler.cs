@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+//dinesh punni tutorial, partial
 
+//update textmesh as you play the game, keeps track of score
+//if I had more time, this is probably where I would have to keep track of the end score to add to database
 public class ScoreHandler : MonoBehaviour
 {
     private int current_score;
@@ -33,14 +36,7 @@ public class ScoreHandler : MonoBehaviour
         current_score_text.text = current_score.ToString();
     }
     void ResetScore()
-    {
-        //check to see if higher than score in database
-        /*if (current_score > PlayerPrefs.GetInt("highscore"))
-        {
-            PlayerPrefs.SetInt("highscore", current_score);
-            high_score_text.text = current_score.ToString();
-        }*/
-        
+    {        
         current_score = 0;
         current_score_text.text = current_score.ToString();
 
