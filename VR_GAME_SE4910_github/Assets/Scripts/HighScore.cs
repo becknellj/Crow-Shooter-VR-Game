@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//iScore Studios tutorial
 
 //must implement the interface to sort the high scores
 class HighScore : IComparable<HighScore>
