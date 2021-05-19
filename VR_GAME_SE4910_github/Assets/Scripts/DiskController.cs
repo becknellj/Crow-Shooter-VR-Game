@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//deletes ball after a few seconds to prevent an overload of objects in the scene
 public class DiskController : MonoBehaviour
 {
     void Start()
