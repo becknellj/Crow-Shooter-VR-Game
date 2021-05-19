@@ -4,6 +4,11 @@ using UnityEngine;
 using System;
 using System.Data;
 using Mono.Data.Sqlite;
+//Dinesh Punni tutorial
+//my database only included one table with 2 columns, player ID and score
+
+//ran out of time to connect these scripts to the other ui element that keeps track of the current score
+//needed to add that value into the database on game over
 public class HighscoreManager : MonoBehaviour
 {
     private string connectionString;
@@ -15,7 +20,7 @@ public class HighscoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //path for database connection
         connectionString = "URI=file:" + Application.dataPath + "/HighScoresDB.sqlite";
         Debug.Log(connectionString);
         
@@ -29,6 +34,8 @@ public class HighscoreManager : MonoBehaviour
     {
         
     }
+    //if we want to delet a score, will come in handy when we dont want to keep
+    //track of anything buit the top n scores
     private void deleteScore(int id)
     {
        using (IDbConnection dbConnection = new SqliteConnection(connectionString))
@@ -51,7 +58,7 @@ public class HighscoreManager : MonoBehaviour
         }
 
     }
-
+    //to insert a score into the table
     private void insertScore(int newScore)
     {
         using (IDbConnection dbConnection = new SqliteConnection(connectionString))
@@ -62,20 +69,24 @@ public class HighscoreManager : MonoBehaviour
             {
                 Debug.Log("hi3");
 
-                string sqlQuery = "INSERT INTO HighScoresDB(Score) VALUES("+newScore+")";
+               //originally had string format but forgot to change it back
+               //creates a query to add the score to the table
+               string sqlQuery = "INSERT INTO HighScoresDB(Score) VALUES("+newScore+")";
                Debug.Log(newScore);
-  
+                
+                //connects the command and executes, adding the new score to teh table
                 dbCmd.CommandText = sqlQuery;
                 dbCmd.ExecuteScalar();
 
                 dbConnection.Close();
-                Debug.Log("hi7");
 
 
             }
 
         }
     }
+    
+    //provides a soreted list of all scores in the database from greatest to least
     private void getScores()
     {
         //clears out any previously saved scores
@@ -99,7 +110,7 @@ public class HighscoreManager : MonoBehaviour
                         //adding hihgscores to the list
                         highScores.Add(new HighScore(reader.GetInt32(0), reader.GetInt32(1)));
                     }
-                    Debug.Log("hi back");
+                   
                     reader.Close();
                     dbConnection.Close();
 
@@ -107,8 +118,10 @@ public class HighscoreManager : MonoBehaviour
             }
 
         }
+        //calls the icomparable sorting compareTo in highscores.cs
         highScores.Sort();
     }
+    //updates the UI by calling setScore in the HighscoreScript.cs
     private void showScores()
     {
         getScores();
