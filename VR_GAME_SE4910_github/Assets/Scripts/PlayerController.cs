@@ -2,8 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//dinesh punni tutorial, different context
 
-
+//controlls the player, what happens if the bird hits them and what happens when they click on the screen
+//only has to do with the player functionality, dying and shooting disks
 public class PlayerController : MonoBehaviour
 {
     public static Action OnPlayerDied = null;
