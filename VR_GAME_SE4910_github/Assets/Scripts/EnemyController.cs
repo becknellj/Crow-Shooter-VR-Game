@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Dinesh Punni tutorial
 
 public class EnemyController : MonoBehaviour
 {
+    //used an event listener to keep entities isolated from one another
     public static Action OnEnemyDied;
-
-
+    
+    //details used for crow motion
     public float speed;
 
     public float xRange;
