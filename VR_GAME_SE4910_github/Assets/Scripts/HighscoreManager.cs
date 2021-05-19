@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using System.Data;
 using Mono.Data.Sqlite;
-//Dinesh Punni tutorial
+//iScore Studios tutorial
 //my database only included one table with 2 columns, player ID and score
 
 //ran out of time to connect these scripts to the other ui element that keeps track of the current score
