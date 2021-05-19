@@ -6,7 +6,7 @@ Crow shooter game by jade becknell
 >>All c# scripts are icluded in the scripts folder under Assets
 >>Just pull the folder to unity 2018.4.3 and build and run for android
 >>>It is a rather larege project and takes a while to build the first time
->>>I also included an apk file so you could just run it
+>>>I also included an apk file so you could just run it (final_project.apk)
 
 **Game Instructions:**
 >Objective: Dont let the crow touch you
