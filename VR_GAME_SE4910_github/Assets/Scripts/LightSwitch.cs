@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//deprecated file, did not want to delete in case of some unknown dependency
+//originally was used to control the light by shooting at a cube
+//no longer in use
 public class LightSwitch : MonoBehaviour
 {
    // public Light myLight;
