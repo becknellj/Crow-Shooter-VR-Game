@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-//Dinesh Punni tutorial
+//iScore Studios tutorial
 
 public class HighScoreScript : MonoBehaviour
 {
