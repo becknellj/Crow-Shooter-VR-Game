@@ -8,8 +8,6 @@ Crow shooter game by jade becknell
 >>>It is a rather larege project and takes a while to build the first time
 >>>I also included an apk file so you could just run it (final_project.apk)
 
-I have never pushed a Unity project to github but I was able to pull and run it
-so let me know of there are any major issues
 
 Sources cited in assets/scripts 
 Please check out the scripts, most of the work was done there, heavily commented
